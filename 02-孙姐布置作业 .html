@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*练习一*/
+        var a = 123;
+        function fun() {
+            var a
+            console.log(a); // undefined
+            a = 456;//此处存在变量提升现象
+        }
+        fun();
+        console.log(a);// 此处打印的为全局变量a 123
+
+        /*练习二*/
+        var a = 123;
+        function fun() {
+            console.log(a);// 打印的是上面定义的全局变量123
+            a = 456; //a为全局变量 不是新定义的变量。全局a的值就变成了456
+        }
+        fun();
+        console.log(a);//打印的修改后的全局变量456
+
+
+        /* 练习三 */
+        var a = 123;
+        function fun(a) { //此处a是形参，a的值取决于传给fun的实参，如果没有传值，则a为undefined
+            console.log(a); // a 为undefined
+            a = 456; //将形参a的值赋值为456 和全局变量没啥关系
+        }
+        fun();
+        console.log(a); // 123。此处打印的才是全局变量a
+
+        /* 练习四 */
+        var a = 123;
+        function fun(a) { // 此处a是形参，a的值取决于传给fun的实参，调用函数时传了实参 123 
+            console.log(a) // 123 所以此处为123
+            a = 456; //将形参a的值赋值为456 和全局变量没啥关系
+        }
+        fun(123);
+        console.log(a); //123。此处打印的才是全局变量a 
+    </script>
+</body>
+
+</html>

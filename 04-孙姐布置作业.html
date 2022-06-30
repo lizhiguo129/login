@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for (var i = 0; i < 5; i++) {
+        //     setTimeout(function () {
+        //         console.log(i)
+        //     }, 1000)
+        // }
+
+
+        // for (let i = 0; i < 5; i++) {
+        //     setTimeout(function () {
+        //         console.log(i)
+        //     }, 1000)
+        // }
+        var foo = 1;
+        function bar() {
+            console.log(foo);  //
+            if (!foo) {
+                var foo = 10;
+            }
+            console.log(foo); //
+        }
+        bar();
+
+
+        /* console.log(foo); //
+        var foo = "A";
+        console.log(foo)  //
+        var foo = function () {
+            console.log("B");
+        }
+        console.log(foo); //
+        foo(); // 
+        function foo() {
+            console.log("C");
+        }
+        console.log(foo)  //
+        foo(); //  */
+    </script>
+</body>
+
+</html>
